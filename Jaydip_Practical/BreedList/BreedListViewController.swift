@@ -23,16 +23,25 @@ class BreedListViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        breedlistViewModel.fetchDogBreeds{ result in
-            switch result {
-            case .success(let breedsResponse):
-                self.arrBreed = breedsResponse.message.keys.sorted()
-            case .failure(let error):
-                // Handle error
-                print("Failed to fetch dog breeds: \(error)")
+        if Reachability.isConnectedToNetwork() {
+            breedlistViewModel.fetchDogBreeds{ result in
+                switch result {
+                case .success(let breedsResponse):
+                    if breedsResponse.status == "success" {
+                        self.arrBreed = breedsResponse.message.keys.sorted()
+                    } else {
+                        self.show_alert(msg: "Something wrong")
+                    }
+                case .failure(let error):
+                    // Handle error
+                    print("Failed to fetch dog breeds: \(error)")
+                    self.show_alert(msg: "Something wrong")
+                }
             }
+        } else {
+            self.show_alert(msg: NO_INTERNET)
         }
+        
     }
 
     @IBAction func btnFavouriteAction(_ sender: UIButton) {

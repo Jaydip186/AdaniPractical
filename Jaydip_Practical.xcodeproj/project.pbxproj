@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C5691C44038249E757A9662 /* Pods_Jaydip_Practical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B862456E624E8283803334 /* Pods_Jaydip_Practical.framework */; };
 		9C0A42D42C32EBFB00F6BC9E /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A42D32C32EBFB00F6BC9E /* AppExtension.swift */; };
+		9C0A42D62C3306ED00F6BC9E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A42D52C3306ED00F6BC9E /* Reachability.swift */; };
 		9C16AD772C32B5FA00050E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16AD762C32B5FA00050E7F /* AppDelegate.swift */; };
 		9C16AD792C32B5FA00050E7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16AD782C32B5FA00050E7F /* SceneDelegate.swift */; };
 		9C16AD7E2C32B5FA00050E7F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9C16AD7D2C32B5FA00050E7F /* Base */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		7D7E22FACECCB8226B804108 /* Pods-Jaydip_Practical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jaydip_Practical.debug.xcconfig"; path = "Target Support Files/Pods-Jaydip_Practical/Pods-Jaydip_Practical.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0A42D32C32EBFB00F6BC9E /* AppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
+		9C0A42D52C3306ED00F6BC9E /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9C16AD732C32B5FA00050E7F /* Jaydip_Practical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jaydip_Practical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C16AD762C32B5FA00050E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C16AD782C32B5FA00050E7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				9C16AD8A2C32B62900050E7F /* AppConstant.swift */,
 				9C61B35D2C32CC350063EA70 /* APIManager.swift */,
 				9C0A42D32C32EBFB00F6BC9E /* AppExtension.swift */,
+				9C0A42D52C3306ED00F6BC9E /* Reachability.swift */,
 			);
 			path = "Comman class";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				9C61B3582C32C7790063EA70 /* BreedDetailViewController.swift in Sources */,
 				9C16AD972C32C1CB00050E7F /* FavouriteViewController.swift in Sources */,
 				9C61B3662C32CD570063EA70 /* BreedDetailViewModel.swift in Sources */,
+				9C0A42D62C3306ED00F6BC9E /* Reachability.swift in Sources */,
 				9C61B36B2C32CE040063EA70 /* BreedListViewController.swift in Sources */,
 				9C0A42D42C32EBFB00F6BC9E /* AppExtension.swift in Sources */,
 				9C16AD772C32B5FA00050E7F /* AppDelegate.swift in Sources */,

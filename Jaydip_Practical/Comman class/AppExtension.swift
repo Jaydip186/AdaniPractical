@@ -8,6 +8,18 @@
 import Foundation
 import UIKit
 
+extension UIViewController {
+    func show_alert(msg:String)
+    {
+        DispatchQueue.main.async
+        {
+            let alert = UIAlertController(title: "", message: msg, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+
 @IBDesignable extension UIView {
     @IBInspectable var shadowRadius: CGFloat {
         get {

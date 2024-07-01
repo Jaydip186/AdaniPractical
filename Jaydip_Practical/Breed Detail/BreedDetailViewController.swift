@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ToastViewSwift
 
 class BreedDetailViewController: UIViewController {
 
@@ -27,15 +28,27 @@ class BreedDetailViewController: UIViewController {
         super.viewDidLoad()
         lblTitle.text = nameStr
         registerCell()
-        breedDetailViewModel.fetchBreedsDetail(name: nameStr){ result in
-            switch result {
-            case .success(let breedsResponse):
-                self.arrBreed = breedsResponse.message ?? []
-            case .failure(let error):
-                // Handle error
-                print("Failed to fetch dog breeds: \(error)")
+        if Reachability.isConnectedToNetwork() {
+            breedDetailViewModel.fetchBreedsDetail(name: nameStr){ result in
+                switch result {
+                case .success(let breedsResponse):
+                    if breedsResponse.status == "success" {
+                        self.arrBreed = breedsResponse.message ?? []
+                    } else {
+                        self.show_alert(msg: "Something Wrong")
+                    }
+                    
+                case .failure(let error):
+                    // Handle error
+                    print("Failed to fetch dog breeds: \(error)")
+                    self.show_alert(msg: "Something wrong")
+                }
             }
+        } else {
+            self.show_alert(msg: NO_INTERNET)
         }
+        
+        
     }
 
     func registerCell() {
@@ -74,8 +87,12 @@ extension BreedDetailViewController: UICollectionViewDataSource, UICollectionVie
         if let indexPath = collectionviewBreed.indexPathForItem(at: point) {
             if DatabaseManager.shared.isFav(arrBreed[indexPath.item]) {
                 DatabaseManager.shared.removeFav(arrBreed[indexPath.item])
+                let toast = Toast.text("Unfavourite sucessfully")
+                toast.show()
             } else {
                 DatabaseManager.shared.addFav(name: nameStr, imgUrl: arrBreed[indexPath.item])
+                let toast = Toast.text("Favourite sucessfully")
+                toast.show()
             }
             collectionviewBreed.reloadData()
         }
