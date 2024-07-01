@@ -1,0 +1,28 @@
+PODS:
+  - SDWebImage (5.19.1):
+    - SDWebImage/Core (= 5.19.1)
+  - SDWebImage/Core (5.19.1)
+  - SQLite.swift (0.15.3):
+    - SQLite.swift/standard (= 0.15.3)
+  - SQLite.swift/standard (0.15.3)
+  - ToastViewSwift (2.1.2)
+
+DEPENDENCIES:
+  - SDWebImage
+  - SQLite.swift
+  - ToastViewSwift
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - SQLite.swift
+    - ToastViewSwift
+
+SPEC CHECKSUMS:
+  SDWebImage: 40b0b4053e36c660a764958bff99eed16610acbb
+  SQLite.swift: 8d054987f02728cc912b0eb5a9659650573a65a2
+  ToastViewSwift: 62e4c54cd482dd1106c2b2224103a8b171763cf3
+
+PODFILE CHECKSUM: 879b4a099031d910f6502f1f3c6ecef460640cab
+
+COCOAPODS: 1.15.2

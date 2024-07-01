@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BreedDetailCollectionViewCell" id="gTV-IL-0wX" customClass="BreedDetailCollectionViewCell" customModule="Jaydip_Practical" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1J-uN-DOa">
+                        <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JFE-n0-2SB">
+                                <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8h-Fu-ONO">
+                                <rect key="frame" x="76" y="10" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3xB-z8-YcE"/>
+                                    <constraint firstAttribute="width" constant="30" id="b42-AO-Rzf"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h8h-Fu-ONO" firstAttribute="top" secondItem="I1J-uN-DOa" secondAttribute="top" constant="10" id="DNc-yi-NLo"/>
+                            <constraint firstAttribute="trailing" secondItem="JFE-n0-2SB" secondAttribute="trailing" id="Tjf-vl-MhM"/>
+                            <constraint firstItem="JFE-n0-2SB" firstAttribute="top" secondItem="I1J-uN-DOa" secondAttribute="top" id="V6a-rQ-rYY"/>
+                            <constraint firstItem="JFE-n0-2SB" firstAttribute="leading" secondItem="I1J-uN-DOa" secondAttribute="leading" id="W86-ix-gi3"/>
+                            <constraint firstAttribute="trailing" secondItem="h8h-Fu-ONO" secondAttribute="trailing" constant="10" id="aPC-ys-74C"/>
+                            <constraint firstAttribute="bottom" secondItem="JFE-n0-2SB" secondAttribute="bottom" id="pcM-qg-NBc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="I1J-uN-DOa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Fzn-V0-vFU"/>
+                <constraint firstAttribute="trailing" secondItem="I1J-uN-DOa" secondAttribute="trailing" id="Hsq-Pm-7zU"/>
+                <constraint firstAttribute="bottom" secondItem="I1J-uN-DOa" secondAttribute="bottom" id="cPV-VS-DaJ"/>
+                <constraint firstItem="I1J-uN-DOa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="m36-gh-KqW"/>
+            </constraints>
+            <size key="customSize" width="116" height="116"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="btnfav" destination="h8h-Fu-ONO" id="4Bp-Jt-wFI"/>
+                <outlet property="imgBreed" destination="JFE-n0-2SB" id="hko-Oe-gyx"/>
+            </connections>
+            <point key="canvasLocation" x="180.15267175572518" y="11.971830985915494"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+    </resources>
+</document>
